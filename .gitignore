@@ -1,0 +1,7 @@
+# IDE
+.vscode
+.idea
+*.dSYM
+
+# rest
+.DS_store
