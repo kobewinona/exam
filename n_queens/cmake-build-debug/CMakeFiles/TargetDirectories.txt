@@ -1,0 +1,3 @@
+/Users/dmitriklimkin/dev/42Network/exam/n_queens/cmake-build-debug/CMakeFiles/n_queens.dir
+/Users/dmitriklimkin/dev/42Network/exam/n_queens/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/dmitriklimkin/dev/42Network/exam/n_queens/cmake-build-debug/CMakeFiles/rebuild_cache.dir

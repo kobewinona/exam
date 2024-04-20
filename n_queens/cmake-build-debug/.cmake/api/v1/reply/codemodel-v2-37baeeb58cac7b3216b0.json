@@ -27,7 +27,7 @@
 					[
 						0
 					],
-					"name" : "rip",
+					"name" : "n_queens",
 					"targetIndexes" : 
 					[
 						0
@@ -38,9 +38,9 @@
 			[
 				{
 					"directoryIndex" : 0,
-					"id" : "rip::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-rip-Debug-f9fc09143a80536f04c5.json",
-					"name" : "rip",
+					"id" : "n_queens::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-n_queens-Debug-f32dd12e274a25a2f1a2.json",
+					"name" : "n_queens",
 					"projectIndex" : 0
 				}
 			]
@@ -49,8 +49,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/Users/dmitriklimkin/dev/rip/cmake-build-debug",
-		"source" : "/Users/dmitriklimkin/dev/rip"
+		"build" : "/Users/dmitriklimkin/dev/42Network/exam/n_queens/cmake-build-debug",
+		"source" : "/Users/dmitriklimkin/dev/42Network/exam/n_queens"
 	},
 	"version" : 
 	{

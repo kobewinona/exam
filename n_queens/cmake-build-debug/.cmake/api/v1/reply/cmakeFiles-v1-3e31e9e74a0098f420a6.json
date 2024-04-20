@@ -106,8 +106,8 @@
 	"kind" : "cmakeFiles",
 	"paths" : 
 	{
-		"build" : "/Users/dmitriklimkin/dev/rip/cmake-build-debug",
-		"source" : "/Users/dmitriklimkin/dev/rip"
+		"build" : "/Users/dmitriklimkin/dev/42Network/exam/n_queens/cmake-build-debug",
+		"source" : "/Users/dmitriklimkin/dev/42Network/exam/n_queens"
 	},
 	"version" : 
 	{

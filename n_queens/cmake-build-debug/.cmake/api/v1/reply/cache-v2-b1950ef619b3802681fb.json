@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/Users/dmitriklimkin/dev/rip/cmake-build-debug"
+			"value" : "/Users/dmitriklimkin/dev/42Network/exam/n_queens/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -140,102 +140,6 @@
 			],
 			"type" : "INTERNAL",
 			"value" : "/Applications/CMake.app/Contents/bin/ctest"
-		},
-		{
-			"name" : "CMAKE_CXX_COMPILER",
-			"properties" : 
-			[
-				{
-					"name" : "ADVANCED",
-					"value" : "1"
-				},
-				{
-					"name" : "HELPSTRING",
-					"value" : "CXX compiler"
-				}
-			],
-			"type" : "FILEPATH",
-			"value" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++"
-		},
-		{
-			"name" : "CMAKE_CXX_FLAGS",
-			"properties" : 
-			[
-				{
-					"name" : "ADVANCED",
-					"value" : "1"
-				},
-				{
-					"name" : "HELPSTRING",
-					"value" : "Flags used by the CXX compiler during all build types."
-				}
-			],
-			"type" : "STRING",
-			"value" : ""
-		},
-		{
-			"name" : "CMAKE_CXX_FLAGS_DEBUG",
-			"properties" : 
-			[
-				{
-					"name" : "ADVANCED",
-					"value" : "1"
-				},
-				{
-					"name" : "HELPSTRING",
-					"value" : "Flags used by the CXX compiler during DEBUG builds."
-				}
-			],
-			"type" : "STRING",
-			"value" : "-g"
-		},
-		{
-			"name" : "CMAKE_CXX_FLAGS_MINSIZEREL",
-			"properties" : 
-			[
-				{
-					"name" : "ADVANCED",
-					"value" : "1"
-				},
-				{
-					"name" : "HELPSTRING",
-					"value" : "Flags used by the CXX compiler during MINSIZEREL builds."
-				}
-			],
-			"type" : "STRING",
-			"value" : "-Os -DNDEBUG"
-		},
-		{
-			"name" : "CMAKE_CXX_FLAGS_RELEASE",
-			"properties" : 
-			[
-				{
-					"name" : "ADVANCED",
-					"value" : "1"
-				},
-				{
-					"name" : "HELPSTRING",
-					"value" : "Flags used by the CXX compiler during RELEASE builds."
-				}
-			],
-			"type" : "STRING",
-			"value" : "-O3 -DNDEBUG"
-		},
-		{
-			"name" : "CMAKE_CXX_FLAGS_RELWITHDEBINFO",
-			"properties" : 
-			[
-				{
-					"name" : "ADVANCED",
-					"value" : "1"
-				},
-				{
-					"name" : "HELPSTRING",
-					"value" : "Flags used by the CXX compiler during RELWITHDEBINFO builds."
-				}
-			],
-			"type" : "STRING",
-			"value" : "-O2 -g -DNDEBUG"
 		},
 		{
 			"name" : "CMAKE_C_COMPILER",
@@ -491,7 +395,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/dmitriklimkin/dev/rip/cmake-build-debug/CMakeFiles/pkgRedirects"
+			"value" : "/Users/dmitriklimkin/dev/42Network/exam/n_queens/cmake-build-debug/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -551,7 +455,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/Users/dmitriklimkin/dev/rip"
+			"value" : "/Users/dmitriklimkin/dev/42Network/exam/n_queens"
 		},
 		{
 			"name" : "CMAKE_INSTALL_NAME_TOOL",
@@ -831,7 +735,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "rip"
+			"value" : "n_queens"
 		},
 		{
 			"name" : "CMAKE_RANLIB",
@@ -1130,7 +1034,7 @@
 			"value" : "FALSE"
 		},
 		{
-			"name" : "rip_BINARY_DIR",
+			"name" : "n_queens_BINARY_DIR",
 			"properties" : 
 			[
 				{
@@ -1139,10 +1043,10 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/dmitriklimkin/dev/rip/cmake-build-debug"
+			"value" : "/Users/dmitriklimkin/dev/42Network/exam/n_queens/cmake-build-debug"
 		},
 		{
-			"name" : "rip_IS_TOP_LEVEL",
+			"name" : "n_queens_IS_TOP_LEVEL",
 			"properties" : 
 			[
 				{
@@ -1154,7 +1058,7 @@
 			"value" : "ON"
 		},
 		{
-			"name" : "rip_SOURCE_DIR",
+			"name" : "n_queens_SOURCE_DIR",
 			"properties" : 
 			[
 				{
@@ -1163,7 +1067,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/dmitriklimkin/dev/rip"
+			"value" : "/Users/dmitriklimkin/dev/42Network/exam/n_queens"
 		}
 	],
 	"kind" : "cache",

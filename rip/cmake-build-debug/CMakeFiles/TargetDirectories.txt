@@ -1,3 +1,3 @@
-/Users/dmitriklimkin/dev/rip/cmake-build-debug/CMakeFiles/rip.dir
-/Users/dmitriklimkin/dev/rip/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/dmitriklimkin/dev/rip/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/dmitriklimkin/dev/42Network/exam/rip/cmake-build-debug/CMakeFiles/rip.dir
+/Users/dmitriklimkin/dev/42Network/exam/rip/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/dmitriklimkin/dev/42Network/exam/rip/cmake-build-debug/CMakeFiles/rebuild_cache.dir
