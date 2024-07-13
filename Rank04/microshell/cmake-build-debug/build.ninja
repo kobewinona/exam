@@ -51,13 +51,13 @@ build cmake_object_order_depends_target_microshell: phony || CMakeFiles/microshe
 
 build CMakeFiles/microshell.dir/main.c.o: C_COMPILER__microshell_unscanned_Debug /Users/dmitriklimkin/dev/42Network/exam/Rank04/microshell/main.c || cmake_object_order_depends_target_microshell
   DEP_FILE = CMakeFiles/microshell.dir/main.c.o.d
-  FLAGS = -g -std=gnu11 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk -fcolor-diagnostics -g
+  FLAGS = -g -std=gnu11 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk -fcolor-diagnostics -g -Wall -Wextra -Werror
   OBJECT_DIR = CMakeFiles/microshell.dir
   OBJECT_FILE_DIR = CMakeFiles/microshell.dir
 
 build CMakeFiles/microshell.dir/handle_parsing.c.o: C_COMPILER__microshell_unscanned_Debug /Users/dmitriklimkin/dev/42Network/exam/Rank04/microshell/handle_parsing.c || cmake_object_order_depends_target_microshell
   DEP_FILE = CMakeFiles/microshell.dir/handle_parsing.c.o.d
-  FLAGS = -g -std=gnu11 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk -fcolor-diagnostics -g
+  FLAGS = -g -std=gnu11 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.0.sdk -fcolor-diagnostics -g -Wall -Wextra -Werror
   OBJECT_DIR = CMakeFiles/microshell.dir
   OBJECT_FILE_DIR = CMakeFiles/microshell.dir
 

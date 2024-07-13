@@ -4,12 +4,14 @@ t_cmd *parse_cmd(char **argv);
 int run_cmd(t_cmd *cmd, char **envp, bool shouldFork);
 
 static void cleanup(t_cmd *cmd) {
+  if (!cmd)
+    return;
+
   if (cmd->type == C_EXEC)
-    free(cmd);
-  else if (cmd->type == C_SEQ) {
-    cleanup(cmd->seq.left);
-    cleanup(cmd->seq.right);
-  }
+    return free(cmd);
+  cleanup(cmd->seq.left);
+  cleanup(cmd->seq.right);
+  free(cmd);
 }
 
 static int handle_err(char *message, char *context) {
@@ -24,7 +26,7 @@ static int handle_err(char *message, char *context) {
 }
 
 static int cd(char **argv) {
-  if (argv[1] && argv[2])
+  if (!argv[1] || argv[2])
     return handle_err("error: cd: bad arguments", NULL);
   if (chdir(argv[1]) == -1)
     return handle_err("error: cd: cannot change directory to ", argv[1]);
@@ -60,18 +62,18 @@ static int handle_seq(t_seq cmd, char **envp) {
   if (cmd.is_pipe) {
     int pipe_fds[2];
     if (pipe(pipe_fds) == -1) {
-      return handle_err("error: pipe failed", NULL);
+      return handle_err("error: fatal", NULL);
     }
 
     pid_t left_pid = fork();
     if (left_pid == -1) {
-      return handle_err("error: fork failed", NULL);
+      return handle_err("error: fatal", NULL);
     }
 
     if (left_pid == 0) {
       close(pipe_fds[0]);
       if (dup2(pipe_fds[1], STDOUT_FILENO) == -1) {
-        handle_err("error: dup2 failed", NULL);
+        handle_err("error: fatal", NULL);
         exit(EXIT_FAILURE);
       }
       close(pipe_fds[1]);
@@ -80,37 +82,34 @@ static int handle_seq(t_seq cmd, char **envp) {
 
     pid_t right_pid = fork();
     if (right_pid == -1) {
-      return handle_err("error: fork failed", NULL);
+      return handle_err("error: fatal", NULL);
     }
 
     if (right_pid == 0) {
       close(pipe_fds[1]);
       if (dup2(pipe_fds[0], STDIN_FILENO) == -1) {
-        handle_err("error: dup2 failed", NULL);
+        handle_err("error: fatal", NULL);
         exit(EXIT_FAILURE);
       }
       close(pipe_fds[0]);
       exit(run_cmd(cmd.right, envp, false));
     }
 
-    // Parent process
     close(pipe_fds[0]);
     close(pipe_fds[1]);
     waitpid(left_pid, &status, 0);
     waitpid(right_pid, &status, 0);
 
     return WIFEXITED(status) ? WEXITSTATUS(status) : EXIT_SUCCESS;
-  } else {
-    status = run_cmd(cmd.left, envp, true);
-    status = run_cmd(cmd.right, envp, true);
   }
 
-  return status;
+  run_cmd(cmd.left, envp, true);
+  return run_cmd(cmd.right, envp, true);
 }
 
 int run_cmd(t_cmd *cmd, char **envp, bool shouldFork) {
   if (!cmd)
-    return EXIT_FAILURE;
+    return EXIT_SUCCESS;
 
   int status = EXIT_SUCCESS;
   if (cmd->type == C_EXEC)
@@ -125,7 +124,7 @@ int main(int argc, char **argv, char **envp) {
   t_cmd *cmd = NULL;
   int status = EXIT_SUCCESS;
 
-  if (argc <= 0)
+  if (argc < 2)
     return EXIT_SUCCESS;
 
   cmd = parse_cmd((argv + 1));

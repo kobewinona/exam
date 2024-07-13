@@ -1,11 +1,19 @@
 #include "microshell.h"
 
+static void ft_memset(void *ptr, int value, size_t num) {
+  unsigned char *p = ptr;
+  while (num-- > 0) {
+    *p++ = (unsigned char)value;
+  }
+}
+
 static t_cmd *constr_cmd(t_cmd_t type) {
   t_cmd *cmd = NULL;
 
   if (!(cmd = (t_cmd *)malloc(sizeof(t_cmd))))
     return NULL;
-  memset(cmd, 0, sizeof(t_cmd));
+  ft_memset(cmd, 0, sizeof(t_cmd));
+
   cmd->type = type;
 
   return cmd;
@@ -16,6 +24,7 @@ static t_cmd *constr_exec(int argc, char **argv) {
 
   if (!(cmd = constr_cmd(C_EXEC)))
     return NULL;
+
   for (int i = 0; i < argc; ++i)
     cmd->exec.argv[i] = argv[i];
 
@@ -49,8 +58,7 @@ static t_cmd *parse_exec(char ***argv) {
 
   int argc;
   for (argc = 0; (*argv)[argc]; ++argc) {
-    if (!(*argv)[argc] || !strcmp((*argv)[argc], "|") ||
-        !strcmp((*argv)[argc], ";"))
+    if (!strcmp((*argv)[argc], "|") || !strcmp((*argv)[argc], ";"))
       break;
   }
 
